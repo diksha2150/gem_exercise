@@ -8,18 +8,16 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
-          <Navbar />
-
+      <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
+        <Navbar />
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/exercise/:id" element={<ExerciseDetail />} />
           </Routes>
-
-          <Footer />
-        </Box>
-      </BrowserRouter>
+        </BrowserRouter>
+        <Footer />
+      </Box>
     </>
   );
 }
